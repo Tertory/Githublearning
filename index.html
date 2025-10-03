@@ -1,17 +1,30 @@
-<!doctype html>
-<html>
-    <body>
-        <h1>Hello World Tertory</h1>
-        <p id="tester"></p>
-        <script>
-            function igotthisincome()
-            {
-            var money = 2000;
-            var cost = 1500;
-            var total = money + cost;
-            document.write("Your budget is : "+ total);
-            }
-            igotthisincome();
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <!-- <div id="greetings">Nutdanai</div> -->
+    <!-- <button id="hideBtn">Click this button to hide</button> -->
+     <input type="text" name="" id="todo">
+     <button onclick="addElement()">Add name</button>
+     <div id="results"></div>
+     <p>Write here</p>
+
+     <script>
+        function addElement(){ //1.สร้างฟังก์ชั่น addElement
+            let newElement = document.createElement("p") //2.สร้างตัวแปร newElement มาเก็บ createElement tag "p" ขึ้นมา
+            let keep = document.getElementById("todo").value //3.สร้างตัวแปร keep สำหรับเก็บค่าที่ input text เข้ามา (โดย "todo" จะเป็น id ของ input)
+            newElement.innerHTML = keep //4.กำหนดค่าให้กับตัวแปร newElement โดยรับมาจากตัวแปร keep อีกที
+            let result = document.getElementById("results") //สร้างตัวแปร result เพื่อ ระบุจุดที่ต้องการจัดการ
+            result.appendChild(newElement) //5.ใช้ตัวแปร result เพื่อใช้ .appendChild ในการเพิ่ม element
+        } //6.เรียกใช้ Attribute กับปุ่มที่เราต้องการ เมื่อคลิกแล้วเรียกใช้งานฟังก์ชั่นนี้
+     </script>
+    
+
+    <script src="script.js"></script> 
+</body>
 </html>
